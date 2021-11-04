@@ -3,7 +3,6 @@ from pico2d import *
 # Boy Event
 RIGHT_DOWN, LEFT_DOWN, RIGHT_UP, LEFT_UP, SLEEP_TIMER, DASH_DOWN, DASH_UP, Idle = range(8)
 
-# fill here
 
 key_event_table = {
     (SDL_KEYDOWN, SDLK_RIGHT): RIGHT_DOWN,
@@ -104,7 +103,6 @@ class DashState:
             boy.image.clip_draw(boy.frame * 100, 100, 100, 100, boy.x, boy.y)
         else:
             boy.image.clip_draw(boy.frame * 100, 0, 100, 100, boy.x, boy.y)
-# fill here
 
 next_state_table = {
     IdleState: {RIGHT_UP: RunState, LEFT_UP: RunState, 
